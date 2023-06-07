@@ -1,0 +1,4 @@
+-- Вывести контактные имена клиентов, кроме тех, что из France и USA.
+SELECT ContactName
+FROM Customers
+WHERE Country NOT IN ('France', 'USA');
