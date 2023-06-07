@@ -1,3 +1,4 @@
+-- Вывести название и стоимость товаров от 20 EUR. 
 SELECT 
 ProductName, 
 Price
