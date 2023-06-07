@@ -1,0 +1,5 @@
+-- В упорядоченном по стоимости виде вывести название и стоимость товаров со скидкой в 9% от всех поставщиков, кроме поставщика 1. 
+SELECT ProductName, SupplierID, Price * 0.81 AS DiscountPrice
+FROM Products
+WHERE NOT SupplierID=1
+ORDER BY Price;
