@@ -1,0 +1,27 @@
+table group {
+  group_id int PK
+}
+
+table group_to_student {
+  id int PK
+  group_id int [ref: > "group"."group_id"]
+  student_id int [ref: > "student"."student_id"]
+  created_at timestamp
+  ended_at timestamp
+}
+
+table student {
+  student_id int PK
+}
+
+table course {
+  course_id int PK
+}
+
+table group_to_course {
+  id int PK
+  group_id int [ref: > "group"."group_id"]
+  course_id int [ref: > "course"."course_id"]
+  started_at timestamp
+  ended_at timestamp
+}
